@@ -16,7 +16,8 @@ type IButtonProps = {
   buttonSize?: ButtonSize;
 
   /** The class name to be applied to the button. */
-  className: string;
+
+  className?: string;
 
   /** The class name to be applied to the button's background. */
   bgClassName?: string;
@@ -55,7 +56,7 @@ export default function Button({
   target = '_self',
   icon,
   iconPosition = ButtonIconPosition.RIGHT,
-  className,
+  className = '',
   bgClassName = twMerge('bg-primary-500 hover:bg-primary-400'),
   textClassName = twMerge('text-white'),
   buttonSize,
