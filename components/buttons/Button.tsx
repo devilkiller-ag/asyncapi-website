@@ -16,7 +16,6 @@ type IButtonProps = {
   buttonSize?: ButtonSize;
 
   /** The class name to be applied to the button. */
-
   className?: string;
 
   /** The class name to be applied to the button's background. */
