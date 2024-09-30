@@ -27,12 +27,12 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Default build settings (for the website)
+# Build settings for Website
 [build]
-  command = "npm run build"         # Website build command
-  publish = "out"                   # Directory for the website output
+  command = "npm run build"
+  publish = "out"
 
-# Storybook build (separate command)
+# Build settings for Storybook
 [[build]]
-  command = "npm run build:storybook"  # Storybook build command
-  publish = "storybook-static"         # Directory for the Storybook output
+  command = "npm run build:storybook"
+  publish = "storybook-static"
