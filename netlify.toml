@@ -27,14 +27,14 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Default build settings (for the website)
+# Default build settings
 [build]
-  command = "npm run build"         # Website build command
-  publish = "out"                   # Directory for the website output
+  command = "npm run build:${DEPLOY_TARGET}"  # Use the environment variable to determine the build command
+  publish = "out"                              # Default publish directory
 
-# Build settings for Storybook (Conditional build settings based on the DEPLOY_TARGET variable)
+# Conditional publish directory based on DEPLOY_TARGET
 [build]
   [[commands]]
-    command = "npm run build:storybook"      # Command for Storybook
-    publish = "storybook-static"              # Publish directory for Storybook
-    if = "DEPLOY_TARGET == 'storybook'"      # Only run if DEPLOY_TARGET is 'storybook'
+    command = "npm run build:storybook"       # Command for Storybook
+    publish = "storybook-static"               # Publish directory for Storybook
+    if = "DEPLOY_TARGET == 'storybook'"       # Only run if DEPLOY_TARGET is 'storybook'
