@@ -32,7 +32,9 @@
   command = "npm run build"         # Website build command
   publish = "out"                   # Directory for the website output
 
-# Build settings for Storybook (use the "storybook" context)
-[context.storybook]
-  command = "npm run build:storybook"  # Storybook build command
-  publish = "storybook-static"         # Directory for the Storybook output
+# Build settings for Storybook (Conditional build settings based on the DEPLOY_TARGET variable)
+[build]
+  [[commands]]
+    command = "npm run build:storybook"      # Command for Storybook
+    publish = "storybook-static"              # Publish directory for Storybook
+    if = "DEPLOY_TARGET == 'storybook'"      # Only run if DEPLOY_TARGET is 'storybook'
