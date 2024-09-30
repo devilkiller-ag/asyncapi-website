@@ -32,7 +32,7 @@
   command = "npm run build"         # Website build command
   publish = "out"                   # Directory for the website output
 
-# Build settings for Storybook (use the "storybook" context)
-[context.storybook]
+# Storybook build (separate command)
+[[build]]
   command = "npm run build:storybook"  # Storybook build command
   publish = "storybook-static"         # Directory for the Storybook output
