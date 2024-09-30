@@ -28,11 +28,11 @@
   package = "@netlify/plugin-nextjs"
 
 # Build settings for Website
-[build]
+[[build]]
   command = "npm run build"
   publish = "out"
 
 # Build settings for Storybook
-[[build]]
+[build]
   command = "npm run build:storybook"
   publish = "storybook-static"
